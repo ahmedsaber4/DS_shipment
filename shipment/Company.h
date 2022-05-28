@@ -9,6 +9,7 @@
 #include "Events.h"
 #include "ds/queue/LinkedQueue.h"
 #include "ds/linked list/LinkedList.h"
+#include "ds/Pri Q/priQ.h"
 
 
 using namespace std;
@@ -33,6 +34,7 @@ protected:
 	LinkedQueue<Event*> EventList;
 
 	//waiting cargos vip priQueue
+	priQ <Cargo*> WaitingVipCargo;
 	LinkedList <Cargo*> WaitingNormalCargo;
 	LinkedQueue <Cargo*> WaitingSpecialCargo;
 	
@@ -43,6 +45,7 @@ protected:
 	LinkedQueue <Truck*> EmptyVIPTruck;
 	
 	//moving trucks priQueue
+	priQ <Truck*> MovingTruck;
 
 	LinkedQueue <Truck*> MaintNormalTruck;
 	LinkedQueue <Truck*> MaintSpecialTruck;
