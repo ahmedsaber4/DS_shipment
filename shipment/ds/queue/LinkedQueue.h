@@ -51,12 +51,17 @@ class LinkedQueue:public QueueADT<T>
 private :
 	Node<T>* backPtr;
 	Node<T>* frontPtr;
+	
 public :
 	LinkedQueue();	
 	bool isEmpty() const ;
 	bool enqueue(const T& newEntry);
-	bool dequeue(T& frntEntry);  
+	bool dequeue(T& frntEntry);
+	 int count = 0;
+
+
 	bool peek(T& frntEntry)  const;	
+	int GetCount();
 	~LinkedQueue();
 };
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -72,7 +77,7 @@ LinkedQueue<T>::LinkedQueue()
 {
 	backPtr=nullptr;
 	frontPtr=nullptr;
-
+	
 }
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -104,13 +109,20 @@ bool LinkedQueue<T>::enqueue( const T& newEntry)
 	Node<T>* newNodePtr = new Node<T>(newEntry);
 	// Insert the new node
 	if (isEmpty())	//special case if this is the first node to insert
+	{
 		frontPtr = newNodePtr; // The queue is empty
-	else
+		count =count+ 1;
+	}
+	else {
 		backPtr->setNext(newNodePtr); // The queue was not empty
+		count =count+ 1;
+	}
+	
 
 	backPtr = newNodePtr; // New node is the last node now
 	return true ;
-} // end enqueue
+}
+// end enqueue
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,6 +154,11 @@ bool LinkedQueue<T>:: dequeue(T& frntEntry)
 	return true;
 }
 
+template<typename T>
+int LinkedQueue<T>::GetCount() {
+	return this->count;
+
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
