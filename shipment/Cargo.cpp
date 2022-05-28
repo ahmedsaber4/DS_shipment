@@ -7,13 +7,13 @@ Cargo::Cargo() {
 
 }
 
-Cargo::Cargo(string TYP, int day, int hour, int ID, double DIST, double LT, double COST)
+Cargo::Cargo(string TYP, cTime time, int ID, double DIST, double LT, double COST)
 {
 	this->setcargoID(ID);
 	this->setcargoType(TYP);
 	this->setcargoDistance(DIST);
 	this->setcargoCost(COST);
-	//this->setpreptime(day, hour);
+	this->setpreptime(time);
 	this->setcargoLoadTime(LT);
 }
 
@@ -51,9 +51,9 @@ double Cargo::getcargoCost() {
 	return COST;
 }
 
-void Cargo::setpreptime(int day, int hour) {
-	preptime.Day = day;
-	preptime.Hour = hour;
+void Cargo::setpreptime(cTime time) {
+	preptime.Day = time.Day;
+	preptime.Hour = time.Hour;
 }
 
 int Cargo::getpreptimeday() {

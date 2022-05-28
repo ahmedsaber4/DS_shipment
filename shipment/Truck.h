@@ -18,6 +18,9 @@ public:
 	Truck();
 	Truck(string TYP,int maint_time,int CPT, int speed, int J);
 
+
+	//priQueue for cargos
+
 	void setTruck_TYP(string t);
 	string getTruck_TYP()const;
 
