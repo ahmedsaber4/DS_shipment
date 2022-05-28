@@ -1,118 +1,14 @@
 #include <iostream>
+#include "ds/Pri Q/priQ.h"
 #include "Company.h"
 #include"ds/stack/ArrayStack.h"
 #include"ds/queue/LinkedQueue.h"
 using namespace std;
 
 int main() {
-	//Company m;
-	//m.SavingOutfile();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	Company m;
+	m.LoadingInFile();
+	
 
 
 
@@ -182,5 +78,34 @@ int main() {
 //
 ////Write code to test empty case and to test peekFront function
 //return 0;
+
+
+
+
+
+
+
+
+
+////PRI Q Check
+/*
+	int c, i, p;
+	int C;
+	priQ <int> pq;
+	pq.insert(10, 3);
+	pq.insert(2, 1);
+	pq.insert(5, 7);
+	pq.show();
+	pq.Delete(C);
+	cout << C <<endl;
+	pq.show();
+	pq.Delete(C);
+	cout << C << endl;
+	pq.show();
+	pq.Delete(C);
+	pq.show();
+	cout << C << endl;
+	*/
+/////PRI Q check
 
 }
