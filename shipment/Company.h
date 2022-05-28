@@ -38,6 +38,7 @@ protected:
 	LinkedQueue <Cargo*> MovingNormalCargo;
 	LinkedQueue <Cargo*> MovingSpecialCargo;
 	*/
+
 	LinkedQueue <Cargo*> DeliveredCargos;
 	
 	LinkedQueue <Truck*> EmptyNormalTruck;

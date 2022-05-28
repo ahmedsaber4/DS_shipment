@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include"Company.h"
+//#include"Company.h"
 using namespace std;
 
 
