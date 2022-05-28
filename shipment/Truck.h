@@ -9,7 +9,6 @@ private:
 	int TruckCapacity; //to be read from the input file 
 	int maint_time;  //time in hours a truck need to do maintenence after j delevary journys 
 	int speed;
-	//Cargo c[TruckCapacity];
 	int deliv_int;
 	int J;					//num of times before maintenence  form the input file 
 

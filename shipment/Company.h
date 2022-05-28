@@ -8,7 +8,7 @@
 #include "ds/stack/StackADT.h"
 //#include "Events.h"
 #include "ds/queue/LinkedQueue.h"
-//#include "ds/Linked_List/LinkedList.h"
+#include "ds/linked list/LinkedList.h"
 
 
 using namespace std;
@@ -28,27 +28,24 @@ private:
 
 protected:
 
-	/*LinkedQueue<preparationEvent*> prepEventsList;
+	/*
+	LinkedQueue<preparationEvent*> prepEventsList;
 	LinkedQueue<cancelEvent*> cancEventsList;
 	LinkedQueue<promoteEvent*> promEventsList;
-
-	LinkedList <Cargo*> WaitingNormalCargo;
-	LinkedQueue <Cargo*> WaitingSpecialCargo;
-
-	LinkedQueue <Cargo*> MovingNormalCargo;
-	LinkedQueue <Cargo*> MovingSpecialCargo;
 	*/
 
+	//waiting cargos vip priQueue
+	LinkedList <Cargo*> WaitingNormalCargo;
+	LinkedQueue <Cargo*> WaitingSpecialCargo;
+	
 	LinkedQueue <Cargo*> DeliveredCargos;
 	
 	LinkedQueue <Truck*> EmptyNormalTruck;
 	LinkedQueue <Truck*> EmptySpecialTruck;
 	LinkedQueue <Truck*> EmptyVIPTruck;
-	/*
-	LinkedQueue <Truck*> ActiveNormalTruck;
-	LinkedQueue <Truck*> ActiveSpecialTruck;
-	LinkedQueue <Truck*> ActiveVIPTruck;
-	*/
+	
+	//moving trucks priQueue
+
 	LinkedQueue <Truck*> MaintNormalTruck;
 	LinkedQueue <Truck*> MaintSpecialTruck;
 	LinkedQueue <Truck*> MaintVIPTruck;
