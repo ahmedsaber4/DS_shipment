@@ -17,6 +17,7 @@ struct Time {
 	int Day;
 	int Hour;
 };
+
 class Company
 {
 private:
