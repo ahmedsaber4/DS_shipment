@@ -13,7 +13,7 @@ Cargo::Cargo(string TYP, int day, int hour, int ID, double DIST, double LT, doub
 	this->setcargoType(TYP);
 	this->setcargoDistance(DIST);
 	this->setcargoCost(COST);
-	this->setpreptime(day, hour);
+	//this->setpreptime(day, hour);
 	this->setcargoLoadTime(LT);
 }
 

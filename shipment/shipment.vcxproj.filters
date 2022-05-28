@@ -13,17 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="stored ds">
-      <UniqueIdentifier>{93db0ce4-d9c2-49c8-9ba4-7549ea71f229}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="stored ds\stack">
-      <UniqueIdentifier>{577ff864-404d-4018-ba50-d2cb8da141dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="stored ds\queue">
-      <UniqueIdentifier>{5cbd0c96-1bcc-4a0b-9b21-cc860c31bb9b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="stored ds\priQ">
-      <UniqueIdentifier>{7b9fa79f-ca2b-4e09-b9fb-b5b939151fe2}</UniqueIdentifier>
+    <Filter Include="stack">
+      <UniqueIdentifier>{e318a5cb-c9b1-4520-bece-98f5519f41b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +26,12 @@
     </ClInclude>
     <ClInclude Include="Cargo.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\stack\ArrayStack.h">
+      <Filter>stack</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\stack\StackADT.h">
+      <Filter>stack</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

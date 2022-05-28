@@ -1,8 +1,8 @@
 #pragma once
 #include <fstream>
 #include <iostream>
-//#include "Truck.h"
-//#include "Cargo.h"
+#include "Truck.h"
+#include "Cargo.h"
 //#include "Stacks/ArrayStack.h"
 //#include "UI.h"
 //#include "Stacks/StackADT.h"
@@ -12,6 +12,7 @@
 //#include "Queue/Node.h"
 
 using namespace std;
+
 
 struct Time {
 	int Day;

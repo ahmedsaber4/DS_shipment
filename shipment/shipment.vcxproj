@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClInclude Include="Cargo.h" />
     <ClInclude Include="Company.h" />
+    <ClInclude Include="ds\stack\ArrayStack.h" />
+    <ClInclude Include="ds\stack\StackADT.h" />
     <ClInclude Include="Truck.h" />
   </ItemGroup>
   <ItemGroup>

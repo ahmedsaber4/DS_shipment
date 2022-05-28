@@ -4,12 +4,15 @@
 using namespace std;
 
 
-
+struct cTime {
+	int Day;
+	int Hour;
+};
 
 
 class Cargo {
 private:
-	Time preptime;
+	cTime preptime;
 
 	string TYP;
 	double DIST; // cargo distance in KM
