@@ -59,6 +59,22 @@ protected:
 	LinkedQueue <Truck*> MaintVIPTruck;*/
 
 public:
+
+	/*
+	-at start ,it loads the available trucks form the file
+	-and make a list of cargos based on the TC of each type
+	-to check if a truck is available	(maintenence or delivary)
+	-if the company is during its working hours ,then do the coming #maintenece and delivary duting the off-hours
+	*make a num of available cargos in the cargo calss
+	-max of loading trucks is 3 ,one for each type
+	--maxW->non-vip cargos only
+	-assignment order ->vip ->special-> normal
+	-vip assignment order -> (delv_dest*cost)/prep_time   <---priQ equ
+	-cargo promotion or cancelation 
+	-auto promotion of normal cargos
+
+
+*/
 	
 	//void setMaxDay(int d);
 	//int getMaxDay();
