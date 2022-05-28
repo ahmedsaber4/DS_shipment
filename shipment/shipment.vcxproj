@@ -143,6 +143,8 @@
     <ClInclude Include="Company.h" />
     <ClInclude Include="ds\linked list\LinkedList.h" />
     <ClInclude Include="ds\linked list\Node.h" />
+    <ClInclude Include="ds\Pri Q\NodeP.h" />
+    <ClInclude Include="ds\Pri Q\priQ.h" />
     <ClInclude Include="ds\queue\LinkedQueue.h" />
     <ClInclude Include="ds\queue\Node.h" />
     <ClInclude Include="ds\queue\QueueADT.h" />

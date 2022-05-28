@@ -51,6 +51,12 @@
     <ClInclude Include="ds\linked list\Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ds\Pri Q\NodeP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\Pri Q\priQ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Truck.cpp">
