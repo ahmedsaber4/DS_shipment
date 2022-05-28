@@ -16,6 +16,9 @@
     <Filter Include="stack">
       <UniqueIdentifier>{e318a5cb-c9b1-4520-bece-98f5519f41b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="queue">
+      <UniqueIdentifier>{8c95ece5-5a1f-4117-90b4-ab4f9e4eb54d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Truck.h">
@@ -32,6 +35,15 @@
     </ClInclude>
     <ClInclude Include="ds\stack\StackADT.h">
       <Filter>stack</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\queue\QueueADT.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\queue\LinkedQueue.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\queue\Node.h">
+      <Filter>queue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
