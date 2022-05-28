@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClInclude Include="Cargo.h" />
     <ClInclude Include="Company.h" />
+    <ClInclude Include="ds\linked list\LinkedList.h" />
+    <ClInclude Include="ds\linked list\Node.h" />
     <ClInclude Include="ds\queue\LinkedQueue.h" />
     <ClInclude Include="ds\queue\Node.h" />
     <ClInclude Include="ds\queue\QueueADT.h" />

@@ -8,6 +8,12 @@
 using namespace std;
 
 
+void Company::simulation()
+{
+	this->LoadingInFile();
+
+}
+
 void Company::LoadingInFile()
 {
 	ifstream file;
