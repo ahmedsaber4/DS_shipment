@@ -12,6 +12,7 @@ void Company::simulation()
 {
 	this->LoadingInFile();
 
+
 }
 
 void Company::LoadingInFile()
