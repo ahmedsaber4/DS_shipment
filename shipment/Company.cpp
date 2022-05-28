@@ -23,7 +23,7 @@ void Company::LoadingInFile()
 	int NS, SS, VS;
 	file >> NS >> SS >> VS; //reading the speed of the trucks
 	int NTC, STC, VTC;
-	file >> NTC >> STC >> VTC; // reading the capicty of the trucks 
+	file >> NTC >> STC >> VTC; // reading the capicty of the trucks hhtsgl 
 	int J;
 	int CN, CS, CV;
 	file >> J >> CN >> CS >> CV; //reading no. of journeys and checkup durations
@@ -51,7 +51,7 @@ void Company::LoadingInFile()
 	file >> E; //reading number of events
 	//setnumEvents(E);
 	string Status, TYP;
-	Time x;
+	cTime x;
 	int ID, DIST, LT;
 	double COST, extramoney;
 	char drop_it;

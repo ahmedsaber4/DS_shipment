@@ -3,21 +3,16 @@
 #include <iostream>
 #include "Truck.h"
 #include "Cargo.h"
-//#include "Stacks/ArrayStack.h"
+#include "ds/stack/ArrayStack.h"
 //#include "UI.h"
-//#include "Stacks/StackADT.h"
+#include "ds/stack/StackADT.h"
 //#include "Events.h"
-//#include "Queue/LinkedQueue.h"
-//#include "Linked_List/LinkedList.h"
-//#include "Queue/Node.h"
+#include "ds/queue/LinkedQueue.h"
+//#include "ds/Linked_List/LinkedList.h"
+
 
 using namespace std;
 
-
-struct Time {
-	int Day;
-	int Hour;
-};
 
 class Company
 {
@@ -27,8 +22,8 @@ private:
 	int maxHour;
 	int numEvents;
 	int waitingCargoTime;
-	Time t;
-	int AutoP, MaxW, N, S, V, NTC, STC, VTC ,J;
+	
+	//int AutoP, MaxW, N, S, V, NTC, STC, VTC ,J;
 	//maint_time check_up;
 
 protected:
@@ -42,22 +37,20 @@ protected:
 
 	LinkedQueue <Cargo*> MovingNormalCargo;
 	LinkedQueue <Cargo*> MovingSpecialCargo;
-
-	LinkedQueue <Cargo*> DeliveredNormalCargo;
-	LinkedQueue <Cargo*> DeliveredSpecialCargo;
-	LinkedQueue <Cargo*> DeliveredVCargo;
-
+	*/
+	LinkedQueue <Cargo*> DeliveredCargos;
+	
 	LinkedQueue <Truck*> EmptyNormalTruck;
 	LinkedQueue <Truck*> EmptySpecialTruck;
 	LinkedQueue <Truck*> EmptyVIPTruck;
-	
+	/*
 	LinkedQueue <Truck*> ActiveNormalTruck;
 	LinkedQueue <Truck*> ActiveSpecialTruck;
 	LinkedQueue <Truck*> ActiveVIPTruck;
-
+	*/
 	LinkedQueue <Truck*> MaintNormalTruck;
 	LinkedQueue <Truck*> MaintSpecialTruck;
-	LinkedQueue <Truck*> MaintVIPTruck;*/
+	LinkedQueue <Truck*> MaintVIPTruck;
 
 public:
 	void simulation();

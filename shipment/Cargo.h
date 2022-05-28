@@ -24,7 +24,7 @@ protected:
 
 public:
 	Cargo();
-	Cargo(string TYP, int day, int hour, int ID, double DIST, double LT, double COST);
+	Cargo(string TYP, cTime time, int ID, double DIST, double LT, double COST);
 
 
 	void setcargoID(int);
@@ -37,7 +37,7 @@ public:
 	double getcargoLoadTime();
 	void setcargoCost(double);
 	double getcargoCost();
-	void setpreptime(int, int);
+	void setpreptime(cTime);
 	int getpreptimeday();
 	int getpreptimehour();
 
