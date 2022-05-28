@@ -34,17 +34,17 @@ void Company::LoadingInFile()
 
 	for (int i = 0; i < N; i++) {
 		Truck* pTruck = new Truck("Normal",CN ,NTC,NS,J);
-		//AddENT(pTruck);
+		AddENT(pTruck);
 	}
 
 	for (int i = 0; i < S; i++) {
 		Truck* pTruck = new Truck("Special",CS, STC,  SS, J);
-		//AddEST(pTruck);
+		AddEST(pTruck);
 	}
 
 	for (int i = 0; i < V; i++) {
 		Truck* pTruck = new Truck("VIP", CV,VTC, VS, J);
-		//AddEVT(pTruck);
+		AddEVT(pTruck);
 	}
 
 	int E;
@@ -63,26 +63,26 @@ void Company::LoadingInFile()
 			file >> TYP >> x.Day >> drop_it >> x.Hour >> ID >> DIST >> LT >> COST;
 			//setMaxDay(x.Day);
 			//setMaxHour(x.Hour);
-			//preparationEvent* PpreparationEvent= new preparationEvent(TYP,x,ID,DIST,LT,COST);
-			//prepEventsList.enqueue(PpreparationEvent);
-			//PpreparationEvent->execute();
+			preparationEvent* PpreparationEvent= new preparationEvent(TYP,x,ID,DIST,LT,COST);
+			EventList.enqueue(PpreparationEvent);
+			PpreparationEvent->execute();
 			
 		}
 		if (Status == "X") {
 			file >> x.Day >> drop_it >> x.Hour >> ID;
 			//setMaxDay(x.Day);
 			//setMaxHour(x.Hour);
-			//cancelEvent* PcancelEvent = new cancelEvent(ID , x);
-			//cancEventsList.enqueue(PcancelEvent);
-			//PcancelEvent->execute();
+			cancelEvent* PcancelEvent = new cancelEvent(ID , x);
+			EventList.enqueue(PcancelEvent);
+			PcancelEvent->execute();
 		}
 		if (Status == "P") {
 			file >> x.Day >> drop_it >> x.Hour >> ID >> extramoney;
 			//setMaxDay(x.Day);
 			//setMaxHour(x.Hour);
-			//promoteEvent* PpromoteEvent = new promoteEvent(ID, x, extramoney);
-			//promEventsList.enqueue(PpromoteEvent);
-			//PpromoteEvent->execute();
+			promoteEvent* PpromoteEvent = new promoteEvent(ID, x, extramoney);
+			EventList.enqueue(PpromoteEvent);
+			PpromoteEvent->execute();
 		}
 	}
 }
@@ -96,6 +96,7 @@ void Company::SavingOutfile()
 
 	file << "---------------------------------";
 }
+
 //int Company::getAutoP()
 //{
 //	return AutoP;
@@ -244,129 +245,59 @@ void Company::SavingOutfile()
 //	return WaitingNormalCargo.getHead();
 //}
 //
-//void Company::AddWNC(Cargo* name)
-//{
-//	if (name != nullptr)
-//		WaitingNormalCargo.InsertBeg(name);
-//}
-//void Company::AddWSC(Cargo* name)
-//{
-//	WaitingSpecialCargo.enqueue(name);
-//}
-//void Company::AddWVC(Cargo* name)
-//{
-//}
-////////////////////////////////////////////////////////////////////////
-/////////////////////////Adding moving cargo list
-//void Company::AddMNC(Cargo* name)
-//{
-//	MovingNormalCargo.enqueue(name);
-//}
-//void Company::AddMSC(Cargo* name)
-//{
-//	MovingSpecialCargo.enqueue(name);
-//}
-//void Company::AddMVC(Cargo* name)
-//{
-//}
-////////////////////////////////////////////////////////////////////////
-//////////////////////////Adding delivered cargo list
-//void Company::AddDNC(Cargo* name)
-//{
-//	DeliveredNormalCargo.enqueue(name);
-//}
-//void Company::AddDSC(Cargo* name)
-//{
-//	DeliveredSpecialCargo.enqueue(name);
-//}
-//void Company::AddDVC(Cargo* name)
-//{
-//	if (name)
-//		DeliveredVCargo.enqueue(name);
-//}
-//
-////////////////////////////////////////////////////////////////////////
-//////////////////////////Adding active truck list
-//void Company::AddANT(Truck* name)
-//{
-//	if (name)
-//	ActiveNormalTruck.enqueue(name);
-//}
-//void Company::AddAST(Truck* name)
-//{
-//	if (name)
-//	ActiveSpecialTruck.enqueue(name);
-//}
-//void Company::AddAVT(Truck* name)
-//{
-//}
-////////////////////////////////////////////////////////////////////////
-////////////////////////Adding maintance truck list
-//void Company::AddMNT(Truck* name)
-//{
-//	if (name)
-//		MaintNormalTruck.enqueue(name);
-//}
-//void Company::AddMST(Truck* name)
-//{
-//	if (name)
-//		MaintSpecialTruck.enqueue(name);
-//}
-//void Company::AddMVT(Truck* name)
-//{
-//}
-//void Company::AddPrepEvent(preparationEvent* name)
-//{
-//	if (name) {
-//		prepEventsList.enqueue(name);
-//	}
-//}
-//
-//void Company::AddPromoEvent(promoteEvent* name)
-//{
-//	if (name) {
-//		promEventsList.enqueue(name);
-//	}
-//}
-//
-//void Company::AddprepEvent(Event* name)
-//{
-//}
-//
-//void Company::AddcancEvent(Event* name)
-//{
-//}
-//
-//void Company::AddpromEvent(Event* name)
-//{
-//}
-//
-//void Company::AddCancelEvent(cancelEvent* name)
-//{
-//	if (name) {
-//		cancEventsList.enqueue(name);
-//	}
-//}
-////////////////////////////////////////////////////////////////////////
-////////////////////////Adding Empty truck list
-//void Company::AddENT(Truck* name)
-//{
-//	if (name)
-//		EmptyNormalTruck.enqueue(name);
-//}
-//void Company::AddEST(Truck* name)
-//{
-//	if (name)
-//		EmptySpecialTruck.enqueue(name);
-//}
-//void Company::AddEVT(Truck* name)
-//{
-//	if (name)
-//		EmptyVIPTruck.enqueue(name);
-//}
-//////////////////////////////////////////////////////////
-//LinkedList <Cargo*>Company::getWaitingNormalList()
-//{
-//
-//	return WaitingNormalCargo;
-//}
+void Company::AddWNC(Cargo* name)
+{
+	if (name != nullptr)
+		WaitingNormalCargo.InsertBeg(name);
+}
+void Company::AddWSC(Cargo* name)
+{
+	WaitingSpecialCargo.enqueue(name);
+}
+
+//////////////////////////////////////////////////////////////////////
+////////////////////////Adding delivered cargo list
+void Company::AddCTD(Cargo* name)
+{
+	DeliveredCargos.enqueue(name);
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////Adding maintance truck list
+void Company::AddMNT(Truck* name)
+{
+	if (name)
+		MaintNormalTruck.enqueue(name);
+}
+void Company::AddMST(Truck* name)
+{
+	if (name)
+		MaintSpecialTruck.enqueue(name);
+}
+void Company::AddMVT(Truck* name)
+{
+}
+
+/// ////////////////////////////////////////////////////////////////
+/// 
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////Adding Empty truck list
+void Company::AddENT(Truck* name)
+{
+	if (name)
+		EmptyNormalTruck.enqueue(name);
+}
+void Company::AddEST(Truck* name)
+{
+	if (name)
+		EmptySpecialTruck.enqueue(name);
+}
+void Company::AddEVT(Truck* name)
+{
+	if (name)
+		EmptyVIPTruck.enqueue(name);
+}
+////////////////////////////////////////////////////////
