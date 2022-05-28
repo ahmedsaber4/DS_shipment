@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "ds/Pri Q/priQ.h"
+#include "Cargo.h"
 using namespace std;
 
 class Truck
@@ -19,6 +21,7 @@ public:
 
 
 	//priQueue for cargos
+	priQ <Cargo*> CargoList;
 
 	void setTruck_TYP(string t);
 	string getTruck_TYP()const;
