@@ -19,6 +19,12 @@
     <Filter Include="queue">
       <UniqueIdentifier>{8c95ece5-5a1f-4117-90b4-ab4f9e4eb54d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="linkedList">
+      <UniqueIdentifier>{c9c7253e-a030-461c-84ac-f14bd500b84d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="priQ">
+      <UniqueIdentifier>{e0e73da6-5181-4160-8a75-a1b1330f44f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Truck.h">
@@ -45,16 +51,19 @@
     <ClInclude Include="ds\queue\Node.h">
       <Filter>queue</Filter>
     </ClInclude>
-    <ClInclude Include="ds\linked list\LinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ds\linked list\Node.h">
-      <Filter>Header Files</Filter>
+      <Filter>linkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="ds\linked list\LinkedList.h">
+      <Filter>linkedList</Filter>
     </ClInclude>
     <ClInclude Include="ds\Pri Q\NodeP.h">
-      <Filter>Header Files</Filter>
+      <Filter>priQ</Filter>
     </ClInclude>
     <ClInclude Include="ds\Pri Q\priQ.h">
+      <Filter>priQ</Filter>
+    </ClInclude>
+    <ClInclude Include="Events.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -69,6 +78,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Cargo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Events.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

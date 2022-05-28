@@ -22,6 +22,7 @@ private:
 	int maxHour;
 	int numEvents;
 	int waitingCargoTime;
+	cTime now;
 	
 	//int AutoP, MaxW, N, S, V, NTC, STC, VTC ,J;
 	//maint_time check_up;
@@ -48,6 +49,8 @@ protected:
 	LinkedQueue <Truck*> MaintVIPTruck;
 
 public:
+	Company();
+	void incrementNow();
 	void simulation();
 	/*
 	-at start ,it loads the available trucks form the file

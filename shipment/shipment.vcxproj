@@ -150,11 +150,13 @@
     <ClInclude Include="ds\queue\QueueADT.h" />
     <ClInclude Include="ds\stack\ArrayStack.h" />
     <ClInclude Include="ds\stack\StackADT.h" />
+    <ClInclude Include="Events.h" />
     <ClInclude Include="Truck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cargo.cpp" />
     <ClCompile Include="Company.cpp" />
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Truck.cpp" />
   </ItemGroup>

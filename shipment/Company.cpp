@@ -8,12 +8,32 @@
 using namespace std;
 
 
+Company::Company()
+{
+	now.Day = 0;
+	now.Hour = 0;
+}
+
+void Company::incrementNow()
+{
+	if (now.Hour < 24)
+		this->now.Hour += 1;
+	else
+	{
+		this->now.Day += 1;
+	}
+}
+
 void Company::simulation()
 {
+	this->incrementNow();
 	this->LoadingInFile();
 
 
+
 }
+
+
 
 void Company::LoadingInFile()
 {
