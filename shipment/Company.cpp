@@ -13,6 +13,7 @@ Company::Company()
 	this->LoadingInFile();
 	now.Day = 0;
 	now.Hour = 0;
+	this->LoadingInFile();
 }
 
 void Company::incrementNow()
@@ -29,6 +30,8 @@ void Company::simulation()
 {
 	this->incrementNow();
 	this->runEvent();
+
+
 
 
 
@@ -98,6 +101,7 @@ void Company::LoadingInFile()
 			file >> TYP >> x.Day >> drop_it >> x.Hour >> ID >> DIST >> LT >> COST;
 			//setMaxDay(x.Day);
 			//setMaxHour(x.Hour);
+		//	calculatePriorty();
 			preparationEvent* PpreparationEvent= new preparationEvent(TYP,x,ID,DIST,LT,COST);
 			EventList.enqueue(PpreparationEvent);
 		}
@@ -127,6 +131,11 @@ void Company::SavingOutfile()
 
 	file << "---------------------------------";
 }
+
+//double Company::calculatePriorty(int DIST , double cost ,  )
+//{
+//	return 0.0;
+//}
 
 //int Company::getAutoP()
 //{
@@ -284,6 +293,11 @@ void Company::AddWNC(Cargo* name)
 void Company::AddWSC(Cargo* name)
 {
 	WaitingSpecialCargo.enqueue(name);
+}
+
+void Company::AddWVC(Cargo* name , double priorty)
+{
+	WaitingVipCargo.insert(name , priorty);
 }
 
 //////////////////////////////////////////////////////////////////////
