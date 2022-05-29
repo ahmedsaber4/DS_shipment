@@ -7,9 +7,9 @@
 using namespace std;
 
 int main() {
-	//Company m;
-	//m.LoadingInFile();
-	
+	Company m;
+
+	cout << "Omar";
 
 
 
@@ -52,36 +52,36 @@ int main() {
 	//return 0;
 //-----------------------------------------------------------------Q testing--------------------------------------------------------------------------------
 	//Declare a queue of integers named "Q"
-LinkedQueue<int> Q;
-int x;
-int n;
-
-//Test the queue by enqueue 6, 7, 8, 9 and 10 then dequeue them.
-cout << "Testing Q:" << endl;
-
-cout << "inter the num of values to insert:" << endl;
-cin >> n;
-cout << "inserting " << n << " values into Q : " << endl;
-
-cout << "Please Enter the 5 values to enqueue in queue1 :"<<endl;
-for (int i = 0; i < n; i++)
-{
-	
-	cin >> x;
-	Q.enqueue(x); //pushing x to stack2
-	cout << Q.GetCount() << endl;
-}
-
-cout << "Testing dequeue operation:\n ";
-
-while (Q.dequeue(x))
-cout << x << " ";
-
-cout << endl;
-
-//Write code to test empty case and to test peekFront function
-return 0;
-
+//LinkedQueue<int> Q;
+//int x;
+//int n;
+//
+////Test the queue by enqueue 6, 7, 8, 9 and 10 then dequeue them.
+//cout << "Testing Q:" << endl;
+//
+//cout << "inter the num of values to insert:" << endl;
+//cin >> n;
+//cout << "inserting " << n << " values into Q : " << endl;
+//
+//cout << "Please Enter the 5 values to enqueue in queue1 :"<<endl;
+//for (int i = 0; i < n; i++)
+//{
+//	
+//	cin >> x;
+//	Q.enqueue(x); //pushing x to stack2
+//	cout << Q.GetCount() << endl;
+//}
+//
+//cout << "Testing dequeue operation:\n ";
+//
+//while (Q.dequeue(x))
+//cout << x << " ";
+//
+//cout << endl;
+//
+////Write code to test empty case and to test peekFront function
+//return 0;
+//
 
 
 
@@ -91,24 +91,25 @@ return 0;
 
 
 ////PRI Q Check
-/*
-	int c, i, p;
-	int C;
-	priQ <int> pq;
-	pq.insert(10, 3);
-	pq.insert(2, 1);
-	pq.insert(5, 7);
-	pq.show();
-	pq.Delete(C);
-	cout << C <<endl;
-	pq.show();
-	pq.Delete(C);
-	cout << C << endl;
-	pq.show();
-	pq.Delete(C);
-	pq.show();
-	cout << C << endl;
-	*/
+
+	//int c, i, p;
+	//int C;
+	//priQ <int> pq;
+	//pq.insert(1, 3703.7);
+	//pq.insert(2, 303.676);
+	//pq.insert(3, 523.529);
+	//pq.insert(4, 700);
+	//pq.show();
+	//pq.Delete(C);
+	//cout << C <<endl;
+	//pq.show();
+	//pq.Delete(C);
+	//cout << C << endl;
+	//pq.show();
+	//pq.Delete(C);
+	//pq.show();
+	//cout << C << endl;
+	//
 /////PRI Q check
 
 }

@@ -13,7 +13,7 @@ Company::Company()
 	this->LoadingInFile();
 	now.Day = 0;
 	now.Hour = 0;
-	this->LoadingInFile();
+	//this->LoadingInFile();
 }
 
 void Company::incrementNow()
@@ -101,7 +101,11 @@ void Company::LoadingInFile()
 			file >> TYP >> x.Day >> drop_it >> x.Hour >> ID >> DIST >> LT >> COST;
 			//setMaxDay(x.Day);
 			//setMaxHour(x.Hour);
-		//	calculatePriorty();
+			//calculatePriorty();
+			/*Cargo* m = new Cargo(TYP, x, ID, DIST, LT, COST);
+			cout << m->calculatePriorty() << endl;
+			AddWVC(m);*/
+
 			preparationEvent* PpreparationEvent= new preparationEvent(TYP,x,ID,DIST,LT,COST);
 			EventList.enqueue(PpreparationEvent);
 		}
@@ -132,10 +136,7 @@ void Company::SavingOutfile()
 	file << "---------------------------------";
 }
 
-//double Company::calculatePriorty(int DIST , double cost ,  )
-//{
-//	return 0.0;
-//}
+
 
 //int Company::getAutoP()
 //{
@@ -295,9 +296,9 @@ void Company::AddWSC(Cargo* name)
 	WaitingSpecialCargo.enqueue(name);
 }
 
-void Company::AddWVC(Cargo* name , double priorty)
+void Company::AddWVC(Cargo* name )
 {
-	WaitingVipCargo.insert(name , priorty);
+	WaitingVipCargo.insert(name , name->calculatePriorty());
 }
 
 //////////////////////////////////////////////////////////////////////

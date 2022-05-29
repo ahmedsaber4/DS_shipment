@@ -45,7 +45,7 @@ void priQ<T>::insert(T item, double pri) {
 	{
 		B = frontPtr;
 		while (B->getNext() != NULL &&
-			B->getNext()->getpriority() <= pri) {
+			B->getNext()->getpriority() >= pri) {
 			B = B->getNext();
 		}
 		A->setNext(B->getNext());

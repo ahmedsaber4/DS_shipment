@@ -104,7 +104,7 @@ public:
 
 	void AddWNC(Cargo* name); //adding to waiting normal waiting list
 	void AddWSC(Cargo* name); //adding to waiting special waiting list
-	void AddWVC(Cargo* name , double priorty); //adding to waiting vip cargo list
+	void AddWVC(Cargo* name); //adding to waiting vip cargo list
 	//adding to waiting VIP waiting list priQueue
 
 	
@@ -126,7 +126,6 @@ public:
 	void LoadingInFile();
 	void SavingOutfile();
 
-	//double calculatePriorty(Cargo* name);
 
 	//int getAutoP();
 	//int getMaxW();	

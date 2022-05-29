@@ -56,11 +56,19 @@ void Cargo::setpreptime(cTime time) {
 	preptime.Hour = time.Hour;
 }
 
-int Cargo::getpreptimeday() {
-	return preptime.Day;
+cTime Cargo::getpreptime() {
+	return preptime;
 
 }
-int Cargo::getpreptimehour() {
 
-	return preptime.Hour;
+
+
+double Cargo::calculatePriorty()
+{
+	return this->getcargoCost() * this->getcargoDistance() / calculatehours(this->getpreptime());
+}
+
+int Cargo::calculatehours(cTime time)
+{
+	return time.Day * 24 + time.Hour;
 }
