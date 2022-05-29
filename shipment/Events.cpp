@@ -15,6 +15,7 @@ preparationEvent::preparationEvent(string type, cTime et, int id, double distanc
 	DIST = distance;
 	LT = loadtime;
 	COST = cost;
+	ET = et;
 }
 
 void preparationEvent::execute() {
@@ -87,5 +88,5 @@ int Event::geteventTimeday()
 
 int Event::geteventTimehour()
 {
-	return 0;
+	return ET.Hour;
 }

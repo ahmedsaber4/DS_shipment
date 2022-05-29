@@ -10,6 +10,7 @@ using namespace std;
 
 Company::Company()
 {
+	this->LoadingInFile();
 	now.Day = 0;
 	now.Hour = 0;
 }
@@ -27,10 +28,23 @@ void Company::incrementNow()
 void Company::simulation()
 {
 	this->incrementNow();
-	this->LoadingInFile();
+	this->runEvent();
 
 
 
+}
+
+void Company::runEvent()
+{
+	Event* E = nullptr;
+	this->EventList.peek(E);
+	if (E != nullptr) {
+		if (E->geteventTimehour() == now.Hour && E->geteventTimeday() == now.Day) {
+			E->execute();
+			EventList.dequeue(E);
+			delete E;
+		}
+	}
 }
 
 

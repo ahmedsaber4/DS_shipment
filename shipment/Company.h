@@ -43,7 +43,7 @@ protected:
 	LinkedQueue <Truck*> EmptyNormalTruck;
 	LinkedQueue <Truck*> EmptySpecialTruck;
 	LinkedQueue <Truck*> EmptyVIPTruck;
-	
+
 	//moving trucks priQueue
 	priQ <Truck*> MovingTruck;
 
@@ -55,6 +55,7 @@ public:
 	Company();
 	void incrementNow();
 	void simulation();
+	void runEvent();
 	/*
 	-at start ,it loads the available trucks form the file
 	-and make a list of cargos based on the TC of each type

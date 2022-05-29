@@ -145,8 +145,11 @@ bool LinkedQueue<T>:: dequeue(T& frntEntry)
 	frntEntry = frontPtr->getItem();
 	frontPtr = frontPtr->getNext();
 	// Queue is not empty; remove front
-	if (nodeToDeletePtr == backPtr)	 // Special case: last node in the queue
-		backPtr = nullptr ;	
+	if (nodeToDeletePtr == backPtr) { // Special case: last node in the queue
+		backPtr = nullptr;
+		count -= 1;
+	}
+
 		
 	// Free memory reserved for the dequeued node
 	delete nodeToDeletePtr;
