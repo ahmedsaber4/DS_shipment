@@ -89,3 +89,13 @@ int Event::geteventTimehour()
 {
 	return 0;
 }
+
+string Event::gettype()
+{
+	return TYP;
+}
+
+int Event::getid()
+{
+	return ID;
+}
