@@ -19,18 +19,18 @@ preparationEvent::preparationEvent(string type, cTime et, int id, double distanc
 }
 
 void preparationEvent::execute() {
-	/*Cargo* c = new Cargo(TYP, ET, ID, DIST, LT, COST);
+	Cargo* c = new Cargo(TYP, ET, ID, DIST, LT, COST);
 
 	if (c->getcargoType() == "normal") {
-		pCompany->AddWNC(c);
+		Pcompany.AddWNC(c);	
 	}
 	if (c->getcargoType() == "special") {
 
-		pCompany->AddWSC(c);
+		Pcompany.AddWSC(c);
 	}
 	if (c->getcargoType() == "VIP") {
-		pCompany->AddWVC(c);
-	}*/
+		Pcompany.AddWVC(c);
+	}
 }
 
 cancelEvent::cancelEvent(int id, cTime et) {
@@ -77,8 +77,10 @@ void promoteEvent::execute() {
 	//}
 }
 
-void Event::seteventTime(int, int)
+void Event::seteventTime(int d, int h)
 {
+	ET.Day = d;
+	ET.Hour = h;
 }
 
 int Event::geteventTimeday()
@@ -89,4 +91,14 @@ int Event::geteventTimeday()
 int Event::geteventTimehour()
 {
 	return ET.Hour;
+}
+
+string Event::gettype()
+{
+	return TYP;
+}
+
+int Event::getid()
+{
+	return ID;
 }

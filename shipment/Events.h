@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+#include "Company.h"
 using namespace std;
 //a struct for time
 //struct Time {
@@ -10,8 +10,11 @@ using namespace std;
 
 class Event {
 protected:
-	
-
+	Company Pcompany;
+	string TYP;
+	double DIST;
+	int LT;
+	double COST;
 	cTime ET; //event time
 	int ID;	//cargo id 
 public:
@@ -19,6 +22,8 @@ public:
 	void seteventTime(int , int);
 	int geteventTimeday();
 	int geteventTimehour();
+	string gettype();
+	int getid();
 
 	virtual void execute() = 0;
 
@@ -27,10 +32,7 @@ public:
 class preparationEvent : public Event
 {
 protected:
-	string TYP;
-	double DIST;
-	int LT;
-	double COST;
+	
 public:
 	
 	preparationEvent();

@@ -7,9 +7,9 @@
 using namespace std;
 
 int main() {
-	//Company m;
-	//m.LoadingInFile();
-	
+	Company m;
+
+	cout << "Omar";
 
 
 
@@ -81,7 +81,7 @@ int main() {
 //
 ////Write code to test empty case and to test peekFront function
 //return 0;
-
+//
 
 
 
@@ -92,23 +92,24 @@ int main() {
 
 ////PRI Q Check
 
-	int c, i, p;
-	int C;
-	priQ <int> pq;
-	pq.insert(10, 9);
-	pq.insert(2, 1);
-	pq.insert(5, 7);
-	pq.show();
-	pq.Delete(C);
-	cout << C <<endl;
-	pq.show();
-	pq.Delete(C);
-	cout << C << endl;
-	pq.show();
-	pq.Delete(C);
-	pq.show();
-	cout << C << endl;
-	
+	//int c, i, p;
+	//int C;
+	//priQ <int> pq;
+	//pq.insert(1, 3703.7);
+	//pq.insert(2, 303.676);
+	//pq.insert(3, 523.529);
+	//pq.insert(4, 700);
+	//pq.show();
+	//pq.Delete(C);
+	//cout << C <<endl;
+	//pq.show();
+	//pq.Delete(C);
+	//cout << C << endl;
+	//pq.show();
+	//pq.Delete(C);
+	//pq.show();
+	//cout << C << endl;
+	//
 /////PRI Q check
 
 }
