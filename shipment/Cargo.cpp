@@ -40,6 +40,7 @@ double Cargo::getcargoDistance() {
 void Cargo::setcargoLoadTime(double lt) {
 	LT = lt;
 }
+
 double Cargo::getcargoLoadTime() {
 	return LT;
 }

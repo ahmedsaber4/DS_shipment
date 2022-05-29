@@ -38,8 +38,9 @@ void priQ<T>::insert(T item, double pri) {
 	A->setpriority(pri);
 	if (frontPtr == NULL || pri > frontPtr->getpriority())
 	{
-		A->setNext(frontPtr);
 		frontPtr = A;
+		A->setNext(frontPtr);
+		
 	}
 	else
 	{

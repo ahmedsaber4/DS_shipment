@@ -19,24 +19,25 @@ preparationEvent::preparationEvent(string type, cTime et, int id, double distanc
 }
 
 void preparationEvent::execute() {
-	/*Cargo* c = new Cargo(TYP, ET, ID, DIST, LT, COST);
-
-	if (c->getcargoType() == "normal") {
-		pCompany->AddWNC(c);
-	}
-	if (c->getcargoType() == "special") {
-
-		pCompany->AddWSC(c);
-	}
-	if (c->getcargoType() == "VIP") {
-		pCompany->AddWVC(c);
-	}*/
+//	Cargo* c = new Cargo(TYP, ET, ID, DIST, LT, COST);
+//
+//	if (c->getcargoType() == "normal") {
+//		Pcompany.AddWNC(c);	
+//	}
+//	if (c->getcargoType() == "special") {                           <<------- there is error here 
+//
+//		Pcompany.AddWSC(c);
+//	}
+//	if (c->getcargoType() == "VIP") {
+//		Pcompany.AddWVC(c);
+//	}
 }
 
 cancelEvent::cancelEvent(int id, cTime et) {
-	ET = et;
-	ID = id;
+	ET = et;  
+	ID = id;  
 };
+
 //template <typename T>
 void cancelEvent::execute() {
 	////pCompany->getHeadWNC()
@@ -59,9 +60,7 @@ promoteEvent::promoteEvent(int id, cTime et, double extramoney) {
 	ID = id;
 	ET = et;
 	Extramoney = extramoney;
-
 };
-
 
 void promoteEvent::execute() {
 	////Node<Cargo>* head= pCompany->getHeadWNC();
@@ -77,8 +76,10 @@ void promoteEvent::execute() {
 	//}
 }
 
-void Event::seteventTime(int, int)
+void Event::seteventTime(int d, int h)
 {
+	ET.Day = d;
+	ET.Hour = h;
 }
 
 int Event::geteventTimeday()

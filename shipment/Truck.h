@@ -32,10 +32,10 @@ public:
 	void setMaint_time(int time);
 	int getMaint_time()const;
 
-	//void setDeliv_int();
+	void setDeliv_int();
 	int getDeliv_int()const;
-//	int farthest_dest();
-	//int sum_load();
+	int farthest_dest();
+	int sum_load();
 
 	void setSpeed(int s);
 	//int getSpeed()const;
