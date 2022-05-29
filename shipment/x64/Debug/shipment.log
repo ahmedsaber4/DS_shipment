@@ -1,5 +1,10 @@
-﻿  Cargo.cpp
-  Company.cpp
-  main.cpp
+﻿  main.cpp
+D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\shipment\main.cpp(95,12): warning C4101: 'p': unreferenced local variable
+D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\shipment\main.cpp(95,9): warning C4101: 'i': unreferenced local variable
+D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\shipment\main.cpp(95,6): warning C4101: 'c': unreferenced local variable
+  Truck.cpp
   Generating Code...
-  shipment.vcxproj -> D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\x64\Debug\shipment.exe
+  LINK : D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\x64\Debug\shipment.exe not found or not built by the last incremental link; performing full link
+Truck.obj : error LNK2019: unresolved external symbol "public: int __cdecl Truck::farthest_dest(void)" (?farthest_dest@Truck@@QEAAHXZ) referenced in function "public: void __cdecl Truck::setDeliv_int(void)" (?setDeliv_int@Truck@@QEAAXXZ)
+Truck.obj : error LNK2019: unresolved external symbol "public: int __cdecl Truck::sum_load(void)" (?sum_load@Truck@@QEAAHXZ) referenced in function "public: void __cdecl Truck::setDeliv_int(void)" (?setDeliv_int@Truck@@QEAAXXZ)
+D:\zewail\Cie 11\data structure\project\New folder\DS_shipment\x64\Debug\shipment.exe : fatal error LNK1120: 2 unresolved externals
