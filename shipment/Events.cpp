@@ -90,3 +90,13 @@ int Event::geteventTimehour()
 {
 	return ET.Hour;
 }
+
+string Event::gettype()
+{
+	return TYP;
+}
+
+int Event::getid()
+{
+	return ID;
+}

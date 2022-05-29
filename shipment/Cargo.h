@@ -13,7 +13,6 @@ struct cTime {
 class Cargo {
 private:
 	cTime preptime;
-
 	string TYP;
 	double DIST; // cargo distance in KM
 	double LT;   // time to load or unload a cargo in hours
@@ -38,7 +37,7 @@ public:
 	void setcargoCost(double);
 	double getcargoCost();
 	void setpreptime(cTime);
-	int getpreptimeday();
-	int getpreptimehour();
-
+	cTime getpreptime();
+	double calculatePriorty();
+	int calculatehours(cTime time);
 };

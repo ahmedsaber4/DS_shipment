@@ -24,8 +24,17 @@ private:
 	int numEvents;
 	int waitingCargoTime;
 	cTime now;
-	
-	//int AutoP, MaxW, N, S, V, NTC, STC, VTC ,J;
+
+
+	/// <summary>
+	/// To check if any another truck is loading or not
+	/// </summary>
+
+	Truck* loadingvip = nullptr;
+	Truck* loadingspecial = nullptr;
+	Truck* loadingnormal = nullptr;
+
+	int AutoP, MaxW, N, S, V, NTC, STC, VTC ,J;
 	//maint_time check_up;
 
 protected:
@@ -43,6 +52,8 @@ protected:
 	LinkedQueue <Truck*> EmptyNormalTruck;
 	LinkedQueue <Truck*> EmptySpecialTruck;
 	LinkedQueue <Truck*> EmptyVIPTruck;
+
+	
 
 	//moving trucks priQueue
 	priQ <Truck*> MovingTruck;
@@ -93,6 +104,7 @@ public:
 
 	void AddWNC(Cargo* name); //adding to waiting normal waiting list
 	void AddWSC(Cargo* name); //adding to waiting special waiting list
+	void AddWVC(Cargo* name); //adding to waiting vip cargo list
 	//adding to waiting VIP waiting list priQueue
 
 	
@@ -113,6 +125,7 @@ public:
 
 	void LoadingInFile();
 	void SavingOutfile();
+
 
 	//int getAutoP();
 	//int getMaxW();	
